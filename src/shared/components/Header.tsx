@@ -6,7 +6,13 @@ import { fontFamilies } from "../constants/fonts";
 import ArrowLeft from "@vectors/ArrowLeft";
 import { colors } from "@/styles";
 
-export default function Header({ title }: { title?: string }) {
+export default function Header({
+  title,
+  safe,
+}: {
+  title?: string;
+  safe?: boolean;
+}) {
   const route = useRoute();
   const navigation = useNavigation();
 
@@ -14,7 +20,7 @@ export default function Header({ title }: { title?: string }) {
 
   return (
     <SafeAreaView
-      edges={["top"]}
+      edges={safe ? [] : ["top"]}
       style={{
         backgroundColor: colors.white,
         padding: 31,
@@ -38,8 +44,7 @@ export default function Header({ title }: { title?: string }) {
             position: "absolute",
             opacity: pressed ? 0.5 : 1,
             left: 31,
-            top: "50%",
-            transform: [{ translateY: 31 - 17 }],
+            bottom: 31 - 7,
             zIndex: 10,
           })}
           onPress={() =>
@@ -54,6 +59,7 @@ export default function Header({ title }: { title?: string }) {
       <Text
         style={{
           fontSize: 19,
+          lineHeight: 19,
           fontFamily: fontFamilies.Inter.semiBold,
           textAlign: "center",
           color: colors.black,

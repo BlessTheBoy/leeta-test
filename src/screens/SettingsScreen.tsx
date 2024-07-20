@@ -18,7 +18,7 @@ export default function SettingsScreen() {
   const { user } = useAuth();
 
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
         backgroundColor: colors.white,
@@ -77,7 +77,7 @@ export default function SettingsScreen() {
           />
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 

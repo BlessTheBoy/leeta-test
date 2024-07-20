@@ -112,13 +112,13 @@ export default function NewAddressScreen() {
     difference && !nameError && !phoneError && !addressError && !stateError;
 
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
         backgroundColor: colors.white,
       }}
     >
-      <Header title={addressID ? "Edit Address" : "New Address"} />
+      <Header title={addressID ? "Edit Address" : "New Address"} safe />
       <KeyboardAwareScrollView
         showsVerticalScrollIndicator={false}
         bounces={false}
@@ -196,6 +196,6 @@ export default function NewAddressScreen() {
           />
         </View>
       </KeyboardAwareScrollView>
-    </SafeAreaView>
+    </View>
   );
 }

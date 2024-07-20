@@ -83,7 +83,7 @@ export default function ProfileScreen() {
     !stateError;
 
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
         backgroundColor: colors.white,
@@ -174,6 +174,6 @@ export default function ProfileScreen() {
           />
         </View>
       </KeyboardAwareScrollView>
-    </SafeAreaView>
+    </View>
   );
 }

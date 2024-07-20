@@ -46,7 +46,7 @@ export default function AddressScreen() {
   }, [user?.address.list, defaultID]);
 
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
       }}
@@ -97,7 +97,7 @@ export default function AddressScreen() {
           </Text>
         </Pressable>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 

@@ -13,7 +13,7 @@ export default function SettingsNavigator() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="Profile" component={SettingsScreen} />
       <Stack.Screen name="Edit Profile" component={ProfileScreen} />
     </Stack.Navigator>
   );

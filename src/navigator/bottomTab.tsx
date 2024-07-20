@@ -59,7 +59,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Settings Home"
+        name="Settings"
         component={SettingsNavigator}
         options={{
           headerShown: false,
